@@ -1,0 +1,38 @@
+!!! 5
+%html
+  %head
+    %meta{:charset => "UTF-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title {page_title}
+    / 1140px Grid styles for IE
+    /[if lte IE 9] <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
+    / The 1140px Grid - http://cssgrid.net/
+    %link{:href => "css/1140.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    / Your styles
+    %link{:href => "css/styles.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+
+  %body
+    .container
+      .row
+        .sevencol
+          #controls
+            %a{:href => "/g"} &nbsp re turn to thicker air
+            #alighted
+              You Have Alighted Upon:&nbsp {link_to_current_snip}
+          #content
+            {current_snip}
+          #details
+            = "({details-for #{app.request.snip_name}})"
+        .threecol
+          #sidebar
+            {sidebar}
+        .onecol.last
+      {thicks}
+        
+        
+      %br
+
+:render_as: Haml
+
+
+

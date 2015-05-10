@@ -1,0 +1,252 @@
+/* ==============================
+/* ! Layout for desktop version
+/* ==============================
+
+.flex-video
+  position: relative
+  padding-top: 25px
+  padding-bottom: 67.5%
+  height: 0
+  margin-bottom: 16px
+  overflow: hidden
+
+  &.widescreen
+    padding-bottom: 56.34% 
+  &.vimeo
+    padding-top: 0
+
+  iframe,
+  object,
+  embed,
+  video
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+$violet: #78278b
+
+.violet
+  color: $violet
+  
+@for $i from 1 through 10
+  .grey-#{$i}
+    color: hsl(0, 1%, 9% * $i)
+
+html
+  border: 4px solid black
+  border-bottom: 16px solid black
+
+body
+  font-size: 13px
+  font-family: 'Helvetica', Arial, sans-serif
+  font-kerning: normal
+  //background-image: url(speckle.png)
+  line-height: 1.4em
+  //border: 4px solid black
+  padding-bottom: 24em
+  text-align: left
+  
+h1, h2, h3, h4, h5, h6
+  line-height: 1.2em
+  margin-top: 1em
+
+p
+  font-size: 1em
+  // padding-bottom: 0
+
+pre
+  font-family: inherit
+  
+.poetic
+  text-indent: -1em
+  padding-left: 1em
+  
+#controls
+  margin-top: 2em
+  margin-bottom: 4em
+  
+#alighted
+  float: right
+  
+#sidebar
+  //width: 240px
+  //height: 400px
+  //background-color: black
+  //color: #CECECE
+  //float: right
+  //display: block
+  //margin-left: 1em
+  text-align: right
+  
+.separator
+  margin-top: 0em
+  margin-bottom: 4em
+  border-top: solid black 0.25em
+  
+.title
+  //width: 60%
+  //position: relative
+  //background-color: #012479
+  //padding: 1em 1em .5em 1em
+  //margin-bottom: 1em
+  //top: 1em
+  //left: 4em
+  font-size: 2em
+  
+a
+  text-decoration: underline
+  padding: 1px 3px 2px 3px
+  margin: -1px -3px -2px -3px
+  &:link, &:visited
+    color: #220f4e
+    background-color: hsla(280, 62%, 50%, 0.12)
+    text-shadow: 1px 1px 3px #FFF 
+    // FF3.5+, Opera 9+, Saf1+, Chrome
+
+  &:hover, &:focus
+    color: white
+    background-color: #220f4e
+    
+#content
+  //width: 600px
+  padding-left: 2em
+  color: #2e2e2e
+  //font-size: 1.25em
+  font-size: 1.2em
+  line-height: 1.4em 
+
+
+  p
+    // margin-top: 1em
+    margin-top: 1.4em
+    //font-size: 1.25em
+    //line-height: 1.5em
+
+  blockquote
+    //color: #015406
+    background-color: hsla(16, 1%, 50%, .1)
+    //border-top: 1px solid #ccc
+    //border-bottom: 1px solid #ccc
+    margin-top: 1em
+    margin-left: 2em
+    margin-bottom: 1em
+    padding-top: 0.5em
+    padding-bottom: 1em
+    padding-left: 1em
+    padding-right: 1em
+
+.blog
+  color: inherit
+
+  .blogtitle
+    //background-color: black
+    //color: white
+    //width: auto
+    border-left: double grey 1em
+    padding-left: 1em
+    
+#details
+  margin-top: 2em
+  margin-bottom: 4em
+  padding: 0.5em
+  // border: solid grey 1px
+  // border-bottom: solid grey 0.25em
+  
+#details, .subtitle, #controls
+  font-size: .9em
+  
+li.search_result
+  i
+    font-size: 0.9em  
+  padding-top: 1em
+  
+.recents-title
+  font-size: 1.2em
+  
+header
+  h1
+    font-size: 2em
+  .post-details
+    font-size: 0.8em
+  
+#details, #sidebar, #controls, #thicks
+  opacity: .2
+  transition: all .5s ease
+  
+  &:hover
+    opacity: 1  
+    transition: all .5s ease
+
+.perma
+  font-size: .8em
+    
+.footnote
+  font-size: .9em
+  background-color: #f9f9f9
+  
+.sidenote
+  float: right
+  width: 13.45%
+  background-color: #f9f9f9
+    
+#footer
+  padding-top: 8em
+  padding-bottom: 2em
+  
+#thicks
+  padding-top: 2em
+  text-align: center
+  //font-size: 1.2em
+  
+  a
+    text-decoration: none
+    display: block
+    
+    padding-top: 3em
+    padding-bottom: 3em
+    //margin: -4px -3px -2px -3px
+    &:link, &:visited
+      color: #220f4e
+      background-color: hsla(280, 62%, 50%, 0.12)
+      text-shadow: 1px 1px 3px #FFF 
+      // FF3.5+, Opera 9+, Saf1+, Chrome
+
+    &:hover, &:focus
+      color: white
+      background-color: #220f4e
+    
+
+/* =============================
+/* ! Layout for mobile version
+/* =============================
+
+@media handheld, only screen and (max-width: 767px)
+  body
+    font-size: 12px
+
+  #content
+    padding-left: 0em
+    
+    blockquote
+      margin-left: 0em
+      
+  #details, #sidebar, #controls, #thicks
+    opacity: .7
+    transition: all .5s ease
+    
+    &:hover
+      opacity: 1  
+      transition: all .5s ease
+
+
+/* ==========================================
+/* ! Provide higher res assets for iPhone 4
+/* ==========================================
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2)
+  /*	.logo {
+   *		background: url(logo2x.jpg) no-repeat;
+   *		background-size: 212px 303px;
+   *	}

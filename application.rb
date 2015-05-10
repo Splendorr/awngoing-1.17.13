@@ -23,8 +23,16 @@ Application.configure do |config|
     "soups/system"
   ]
 
+  # This is a dumping ground of ideas at the moment
+  #
+  config.soups << "soups/extras"
+  
+  # Splendorr added these soups:
+  config.soups << "soups/awn"
+  config.soups << "soups/awn/weeklies"
+
   # If you don't want the tutorial on your site, remove this and delete the directory
-  config.soups << "soups/tutorial"
+  # config.soups << "soups/tutorial"
 
   # This is a dumping ground of ideas at the moment
   #
@@ -32,7 +40,7 @@ Application.configure do |config|
 
   # The snip to render on requests to "/". This defaults to "start"
   #
-  # config.root_snip = "some-other-snip"
+  config.root_snip = "g"
 
   # You can register additional renderer classes, to be used with snips
   # with the given extensions or 'render_as' attributes

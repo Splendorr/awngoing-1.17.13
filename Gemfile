@@ -1,4 +1,5 @@
-source :rubygems
+source 'https://rubygems.org'
+ruby "2.2.1"
 
 # Vanilla itself.
 gem 'vanilla', '1.17.13'

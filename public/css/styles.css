@@ -1,0 +1,224 @@
+/* ============================== */
+/* ! Layout for desktop version */
+/* ============================== */
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden; }
+  .flex-video.widescreen {
+    padding-bottom: 56.34%; }
+  .flex-video.vimeo {
+    padding-top: 0; }
+  .flex-video iframe,
+  .flex-video object,
+  .flex-video embed,
+  .flex-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.violet {
+  color: #78278b; }
+
+.grey-1 {
+  color: #171717; }
+
+.grey-2 {
+  color: #2e2d2d; }
+
+.grey-3 {
+  color: #464444; }
+
+.grey-4 {
+  color: #5d5b5b; }
+
+.grey-5 {
+  color: #747272; }
+
+.grey-6 {
+  color: #8b8989; }
+
+.grey-7 {
+  color: #a2a0a0; }
+
+.grey-8 {
+  color: #b8b7b7; }
+
+.grey-9 {
+  color: #cfcece; }
+
+.grey-10 {
+  color: #e6e5e5; }
+
+html {
+  border: 4px solid black;
+  border-bottom: 16px solid black; }
+
+body {
+  font-size: 13px;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-kerning: normal;
+  line-height: 1.4em;
+  padding-bottom: 24em;
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+  margin-top: 1em; }
+
+p {
+  font-size: 1em; }
+
+pre {
+  font-family: inherit; }
+
+.poetic {
+  text-indent: -1em;
+  padding-left: 1em; }
+
+#controls {
+  margin-top: 2em;
+  margin-bottom: 4em; }
+
+#alighted {
+  float: right; }
+
+#sidebar {
+  text-align: right; }
+
+.separator {
+  margin-top: 0em;
+  margin-bottom: 4em;
+  border-top: solid black 0.25em; }
+
+.title {
+  font-size: 2em; }
+
+a {
+  text-decoration: underline;
+  padding: 1px 3px 2px 3px;
+  margin: -1px -3px -2px -3px; }
+  a:link, a:visited {
+    color: #220f4e;
+    background-color: rgba(154, 48, 207, 0.12);
+    text-shadow: 1px 1px 3px #FFF; }
+  a:hover, a:focus {
+    color: white;
+    background-color: #220f4e; }
+
+#content {
+  padding-left: 2em;
+  color: #2e2e2e;
+  font-size: 1.2em;
+  line-height: 1.4em; }
+  #content p {
+    margin-top: 1.4em; }
+  #content blockquote {
+    background-color: rgba(129, 127, 126, 0.1);
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em; }
+
+.blog {
+  color: inherit; }
+  .blog .blogtitle {
+    border-left: double grey 1em;
+    padding-left: 1em; }
+
+#details {
+  margin-top: 2em;
+  margin-bottom: 4em;
+  padding: 0.5em; }
+
+#details, .subtitle, #controls {
+  font-size: 0.9em; }
+
+li.search_result {
+  padding-top: 1em; }
+  li.search_result i {
+    font-size: 0.9em; }
+
+.recents-title {
+  font-size: 1.2em; }
+
+header h1 {
+  font-size: 2em; }
+header .post-details {
+  font-size: 0.8em; }
+
+#details, #sidebar, #controls, #thicks {
+  opacity: 0.2;
+  transition: all 0.5s ease; }
+  #details:hover, #sidebar:hover, #controls:hover, #thicks:hover {
+    opacity: 1;
+    transition: all 0.5s ease; }
+
+.perma {
+  font-size: 0.8em; }
+
+.footnote {
+  font-size: 0.9em;
+  background-color: #f9f9f9; }
+
+.sidenote {
+  float: right;
+  width: 13.45%;
+  background-color: #f9f9f9; }
+
+#footer {
+  padding-top: 8em;
+  padding-bottom: 2em; }
+
+#thicks {
+  padding-top: 2em;
+  text-align: center; }
+  #thicks a {
+    text-decoration: none;
+    display: block;
+    padding-top: 3em;
+    padding-bottom: 3em; }
+    #thicks a:link, #thicks a:visited {
+      color: #220f4e;
+      background-color: rgba(154, 48, 207, 0.12);
+      text-shadow: 1px 1px 3px #FFF; }
+    #thicks a:hover, #thicks a:focus {
+      color: white;
+      background-color: #220f4e; }
+
+/* ============================= */
+/* ! Layout for mobile version */
+/* ============================= */
+@media handheld, only screen and (max-width: 767px) {
+  body {
+    font-size: 12px; }
+
+  #content {
+    padding-left: 0em; }
+    #content blockquote {
+      margin-left: 0em; }
+
+  #details, #sidebar, #controls, #thicks {
+    opacity: 0.7;
+    transition: all 0.5s ease; }
+    #details:hover, #sidebar:hover, #controls:hover, #thicks:hover {
+      opacity: 1;
+      transition: all 0.5s ease; } }
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4 */
+/* ========================================== */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  /*	.logo {
+   *		background: url(logo2x.jpg) no-repeat;
+   *		background-size: 212px 303px;
+   *	} */ }
+
+/*# sourceMappingURL=styles.css.map */
