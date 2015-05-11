@@ -1,11 +1,13 @@
 class Search < Dynasnip
-  attribute :search_form, %{
-    <form method="post" action="" class="search">
-    <label for="q">Sea Arch</label>
-    <input type="text" name="q" />
-    <button>Sea Arch</button>
-    </form>
-  }
+  def search_form
+    %{
+      <form method="post" action="" class="search">
+      <label for="q">Search</label>
+      <input type="text" name="q" />
+      <button>Search</button>
+      </form>
+    }
+  end
 
   def get(*args)
     if app.request.params[:q]
@@ -26,13 +28,12 @@ class Search < Dynasnip
     if term =~ /[^\w\s\-_\.]/
       "<p>Please only use characters, spaces, hyphens, underscores and periods in your search term</p>"
     else
-      matches = `fgrep -r "#{term}" {#{app.config[:soups].join(",")}}`.split("\n")
-      "<h2>Search results</h2>" + search_form + if matches.any?
+      matches = `fgrep -r "#{term}" #{app.config.soups.join(" ")}`.split("\n")
+      search_form + "<h2>Results</h2>" + if matches.any?
         grouped_matches = {}
         matches.each do |match|
           next if match =~ /::/
           parts = match.split(":")
-          # snip = File.basename(parts.shift, ".yml")
           snip = File.basename(parts.shift.split(".").first)
           context = parts.join
           grouped_matches[snip] ||= []
@@ -46,7 +47,7 @@ class Search < Dynasnip
               insert(start + term.length, "</span>").
               insert(start, %{<span class="match">}).strip
           end
-          %{<li class="search_result">{lt #{snip}} &rarr; </br> <i>#{contexts.join(" &hellip; ")}</i></li>}
+          %{<li class="search_result">{lt #{snip}} &rarr; <i>#{contexts.join(" &hellip; ")}</i></li>}
         end.join + "</ol>"
       else
         %{<p>No matches for "#{term}"</p>}
@@ -56,5 +57,3 @@ class Search < Dynasnip
 
   self
 end
-
-:page_title: See Arch

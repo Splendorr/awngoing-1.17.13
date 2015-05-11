@@ -1,7 +1,12 @@
-$:.unshift File.expand_path("../lib", __FILE__)
+# $:.unshift File.expand_path("../lib", __FILE__)
+$:.unshift File.join(File.dirname(__FILE__), "lib")
+$:.unshift File.join(File.dirname(__FILE__))
+
 require 'rubygems'
 require 'bundler/setup'
 require 'vanilla'
+
+require 'redcarpet_renderer'
 
 # This is your application subclass.
 class Application < Vanilla::App
@@ -40,10 +45,12 @@ Application.configure do |config|
 
   # The snip to render on requests to "/". This defaults to "start"
   #
-  config.root_snip = "g"
+  config.root_snip = "recents"
 
   # You can register additional renderer classes, to be used with snips
   # with the given extensions or 'render_as' attributes
   #
   # config.renderers[:awesome] = My::Custom::RendererClass
+  
+  config.renderers[:redcarpet] = Vanilla::Renderers::Redcarpet
 end

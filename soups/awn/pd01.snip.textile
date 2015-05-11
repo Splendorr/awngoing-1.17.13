@@ -103,7 +103,7 @@ But one last!
 :page_title: p()d, u()n, e()a, et cataro — Spins, Substratutions, Différance and Quantum Shifts
 :author: Splendorr
 :kind: Kind
-:render_as: Textile
+:render_as: redcarpet
 
 
 
