@@ -53,4 +53,5 @@ Application.configure do |config|
   # config.renderers[:awesome] = My::Custom::RendererClass
   
   config.renderers[:redcarpet] = Vanilla::Renderers::Redcarpet
+  config.renderers[:idontreadpoetry] = Vanilla::Renderers::RedcarpetNoPo
 end

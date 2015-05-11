@@ -68,8 +68,7 @@ body {
   text-align: left; }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2em;
-  margin-top: 1em; }
+  line-height: 1.2em; }
 
 p {
   font-size: 1em; }
@@ -90,6 +89,8 @@ pre {
 
 #sidebar {
   text-align: right; }
+  #sidebar h1, #sidebar h2, #sidebar h3, #sidebar h4, #sidebar h5, #sidebar h6 {
+    margin-top: 1em; }
 
 .separator {
   margin-top: 0em;
@@ -117,7 +118,7 @@ a {
   font-size: 1.2em;
   line-height: 1.4em; }
   #content p {
-    margin-top: 1.4em; }
+    margin-bottom: 1.3em; }
   #content blockquote {
     background-color: rgba(129, 127, 126, 0.1);
     margin-top: 1em;
@@ -150,10 +151,12 @@ li.search_result {
 .recents-title {
   font-size: 1.2em; }
 
-header h1 {
-  font-size: 2em; }
-header .post-details {
-  font-size: 0.8em; }
+header {
+  margin-bottom: 1em; }
+  header h1 {
+    font-size: 2em; }
+  header .post-details {
+    font-size: 0.8em; }
 
 #details, #sidebar, #controls, #thicks {
   opacity: 0.2;
@@ -165,9 +168,14 @@ header .post-details {
 .perma {
   font-size: 0.8em; }
 
-.footnote {
+.footnote, .footnotes {
   font-size: 0.9em;
   background-color: #f9f9f9; }
+  .footnote ol, .footnotes ol {
+    background-color: #f9f9f9;
+    margin-left: 2em; }
+    .footnote ol li, .footnotes ol li {
+      background-color: #f9f9f9; }
 
 .sidenote {
   float: right;

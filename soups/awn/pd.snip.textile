@@ -9,8 +9,26 @@ Could perhaps Sir be engendered an enticementiddle?"
 
 ... .... ... .... ... ....
 
+# {pd01.page_title}
+{pd01}
+
+...
+
+# {pd02.page_title}
+{pd02}
+
+...
+
+# {pd03.page_title}
+{pd03}
+
+...
+
+# {pd04.page_title}
+{pd04}
+
 :page_title: p()d
 :author: Various
-:kind: Kind
-:render_as: Textile
+:kind: thicker
+:render_as: redcarpet
 
