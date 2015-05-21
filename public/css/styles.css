@@ -120,12 +120,12 @@ a {
   #content p {
     margin-bottom: 1.3em; }
   #content blockquote {
-    background-color: rgba(129, 127, 126, 0.1);
+    background-color: rgba(120, 39, 139, 0.2);
     margin-top: 1em;
     margin-left: 2em;
     margin-bottom: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 0.1em;
     padding-left: 1em;
     padding-right: 1em; }
 
